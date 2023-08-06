@@ -5,8 +5,8 @@
 # https://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 124.222.238.190 (MySQL 5.7.36)
-# Database: laravel-dev
+# Host: 127.0.0.1 (MySQL 5.7.36)
+# Database: laravel
 # Generation Time: 2023-08-06 00:38:22 +0000
 # ************************************************************
 
