@@ -1,0 +1,14 @@
+FROM bitnami/node:16.17.1
+MAINTAINER itxiaoma <itxiaoma@aliyun.com>
+# 设置时间
+RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo 'Asia/Shanghai' > /etc/timezone
+RUN npm config set prefix $HOME/.node_modules echo "export PATH=$HOME/.node_modules/bin:\$PATH" >> ~/.zshrc && source ~/.zshrc
+RUN npm config set registry https://registry.npmmirror.com/
+# 扩展依赖
+RUN apt-get update \
+    && apt-get install -y \
+        procps \
+        vim \
+        curl
+	
